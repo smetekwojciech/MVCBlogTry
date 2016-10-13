@@ -13,19 +13,20 @@ namespace MVCBlogTry.Models
             this.Article_Category = new Hashset<Article_Category>();
         }
 
+        [Key]
         [Display(Name = "Id :")]
         public int Id { get; set; }
 
 
-        [Display(Name = "Article Text :")]
+        [Display(Name = "Tekst :")]
         [MaxLength(5000)]
         public string Text { get; set; }
 
-        [Display(Name = "Article Title :")]
+        [Display(Name = "Tytuł :")]
         [MaxLength(100)]
         public string Title { get; set; }
 
-        [Display(Name = "Date Added:")]
+        [Display(Name = "Data Dodania:")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public System.DateTime DateAdded { get; set; }
