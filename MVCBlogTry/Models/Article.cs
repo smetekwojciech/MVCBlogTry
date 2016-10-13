@@ -10,7 +10,7 @@ namespace MVCBlogTry.Models
     {
         public Article()
         {
-            this.Article_Category = new Hashset<Article_Category>();
+            this.Article_Category = new HashSet<Article_Category>();
         }
 
         [Key]
