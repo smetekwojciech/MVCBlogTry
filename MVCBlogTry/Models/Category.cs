@@ -41,11 +41,11 @@ namespace MVCBlogTry.Models
         [Display(Name = "Treść strony : ")]
         [MaxLength(500)]
         public string SiteContent { get; set; }
-
+        #endregion
         public ICollection<Article_Category> Article_Category { get; set; }
 
 
-        #endregion
+       
 
     }
 }

@@ -30,6 +30,7 @@ namespace MVCBlogTry.Models
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public System.DateTime DateAdded { get; set; }
+        public string UserId { get; set; }
 
         public virtual ICollection<Article_Category> Article_Category { get; set; }
         public virtual User User { get; set; }
