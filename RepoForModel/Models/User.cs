@@ -9,7 +9,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web;
 
-namespace MVCBlogTry.Models
+namespace RepoForModel.Models
 {
     public class User : IdentityUser
     {

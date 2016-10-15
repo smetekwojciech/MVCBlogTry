@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using System.Data.Entity.ModelConfiguration.Conventions;
 
-namespace MVCBlogTry.Models
+namespace RepoForModel.Models
 {
     
 

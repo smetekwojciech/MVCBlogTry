@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace MVCBlogTry.Models
+namespace RepoForModel.Models
 {
     public class Article_Category
     {
