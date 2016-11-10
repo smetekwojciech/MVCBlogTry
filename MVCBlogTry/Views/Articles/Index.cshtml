@@ -1,0 +1,77 @@
+﻿@model IEnumerable<RepoForModel.Models.Article>
+
+@{
+    
+    ViewBag.MetaTitle= "Tytuł Bloga";
+    ViewBag.MetaKeywords= "Blog, Artykuł, Aplikacja, MVC";
+    ViewBag.MetaDesctiption= "Opis aplikacji";
+}
+
+<h2>Lista artykułów</h2>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+<div class="container">
+    @foreach (var item in Model)
+    {
+        <div class="row">
+            <div class="col-md-8">
+                @Html.DisplayFor(modelItem => item.Title)
+            </div>
+            <div class="col-md-8">
+                @Html.DisplayFor(modelItem => item.Text)
+            </div>
+            <div class="col-md-2">
+                @Html.DisplayFor(modelItem => item.DateAdded)
+            </div>
+            <div class="col-md-4">
+                @Html.ActionLink("Edytuj", "Edit", new { id = item.Id }, new { @class = "btn btn-primary" })
+                @Html.ActionLink("Usuń", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+                @Html.ActionLink("Szczegóły", "Details", new { id = item.Id }, new { @class = "btn btn-warning" })
+            </div>
+
+
+        </div>
+    }
+</div>
+
+     @*<tr>
+        <th>
+            @Html.DisplayNameFor(model => model.User.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Text)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateAdded)
+        </th>
+        <th></th>
+    </tr>*@
+
+@*@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.User.Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Text)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateAdded)
+        </td>
+        <td>
+            @Html.ActionLink("Edytuj", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Szczegóły", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Usuń", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}*@
+
+

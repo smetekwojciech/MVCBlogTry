@@ -18,6 +18,11 @@ namespace RepoForModel.Migrations
 
         protected override void Seed(RepoForModel.Models.MVCBlogTryContext context)
         {
+            if (System.Diagnostics.Debugger.IsAttached == false)
+            {
+                System.Diagnostics.Debugger.Launch();
+            }
+
             SeedRoles(context);
             SeedUsers(context);
             SeedArticles(context);
@@ -48,7 +53,7 @@ namespace RepoForModel.Migrations
 
             if (!context.Users.Any(u=>u.UserName=="Admin"))
             {
-                var User = new User { UserName = "Admin" };
+                var User = new User { UserName = "Admin" , Age=20 };
                 var AdminResult = Manager.Create(User, "12345678");
                 if (AdminResult.Succeeded)
                 {
